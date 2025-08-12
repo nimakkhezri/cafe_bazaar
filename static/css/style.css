@@ -1,0 +1,267 @@
+@font-face {
+    font-family: "Vazir Regular";
+    src: local("Vazir Regular"),
+    url(../fonts/ttf/Vazirmatn-Regular.ttf) format("truetype"),
+    url(../fonts/woff2/Vazirmatn-Regular.woff2) format("woff2");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Vazir Medium";
+    src: local("Vazir Medium"),
+    url(../fonts/ttf/Vazirmatn-Medium.ttf) format("truetype"),
+    url(../fonts/woff2/Vazirmatn-Medium.woff2) format("woff2");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Vazir Bold";
+    src: local("Vazir Bold"),
+    url(../fonts/ttf/Vazirmatn-Bold.ttf) format("truetype"),
+    url(../fonts/woff2/Vazirmatn-Bold.woff2) format("woff2");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Vazir Light";
+    src: local("Vazir Light"),
+    url(../fonts/ttf/Vazirmatn-Light.ttf) format("truetype"),
+    url(../fonts/woff2/Vazirmatn-Light.woff2) format("woff2");
+    font-weight: 300;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1E1E1E;
+}
+
+main{
+    max-width: 360px;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container{
+    overflow: hidden;
+}
+
+.image-container img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.info-box{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    bottom: 0;
+    background-color: #011d18;
+    border-radius: 20px 20px 0px 0px;
+    height: 220px;
+}
+
+.title{
+    padding-top: 32px;
+    font-family: "Vazir Medium";
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFD0A1;
+    margin-bottom: 40px;
+}
+
+.main-btn-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 10%;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.main-btn{
+    display: flex;
+    gap: 8px;
+}
+
+.main-btn-text{
+    font-family: "Vazir Regular";
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFD0A1;
+}
+
+/* Menu */
+
+.menu-bg{
+    min-height: 280px;
+    width: 100%;
+    background-image: url(../images/menu_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.menu-container{
+    background-color: #011d18;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-container h1{
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-family: "Vazir Medium";
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFD0A1;
+}
+
+.menu-btn-bar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 48px;
+}
+
+.category-btn{
+    outline: none;
+    background-color: #011d18;
+    border: 2px solid #FFD0A1;
+    border-radius: 12px;
+    min-width: 156px;
+    height: 86px;
+}
+
+.category-btn h3{
+    margin-top: 6px;
+    color: #FFD0A1;
+    font-family: "Vazir Regular";
+    font-weight: 500;
+    font-size: 10px;
+}
+
+.menu-bar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 0px 13px;
+    margin-bottom: 20px;
+}
+
+.category-name{
+    display: flex;
+    gap: 4px;
+}
+
+.category-name h2{
+    font-family: "Vazir Regular";
+    font-size: 12px;
+    font-weight: 500;
+    color: #FFD0A1;
+    margin-bottom: 2px;
+}
+
+.items-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.item-box{
+    height: 91px;
+    display: flex;
+    border-radius: 12px;
+    border: 1px solid #FFD0A1;
+}
+
+.item-photo{
+    flex: 1;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 4px;
+}
+
+.item-photo img{
+    object-fit: cover;
+    object-position: center;
+    mask-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.item-details{
+    flex: 2;
+    position: relative;
+    width: 100%;
+}
+
+.item-name-box{
+    position: absolute;
+    top: 12px;
+    right: 8px;
+}
+
+.item-name{
+    font-family: "Vazir Regular";
+    font-weight: 500;
+    font-size: 12px;
+    color: #FFD0A1;
+}
+
+.item-subname{
+    font-family: "Vazir Regular";
+    color: #F9F6E6;
+    font-size: 7px;
+    font-weight: 500;
+}
+
+.price-box{
+    position: absolute;
+    bottom: 8px;
+    left: 12px;
+}
+
+.item-type{
+    display: flex;
+    flex-direction: column;
+}
+
+.item-type-title{
+    font-family: "Vazir Regular";
+    font-weight: 500;
+    color: #FFD0A1;
+    font-size: 8px;
+}
+
+.price{
+    font-family: "Vazir Regular";
+    font-size: 10px;
+    color: #F9F6E6;
+}
+
+.price-box{
+    display: flex;
+    gap: 20px;
+}
+
