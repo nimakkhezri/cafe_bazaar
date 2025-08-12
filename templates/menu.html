@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منوی دیجیتال | کافه بازار</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <main>
+        <div class="menu-bg"></div>
+        <div class="menu-container">
+            <h1>به کافه بازار خوش آمدید</h1>
+            <div class="menu-btn-bar">
+                {% for category in categories %}
+                <button class="category-btn">
+                    <img src="{% if category.icon %}{{ category.icon.url }}{% else %}{% static 'images/coffee-maker.svg' %}{% endif %}" alt="{{ category.name }}">
+                    <h3 class="category-btn-title">
+                        {{ category.name }}
+                    </h3>
+                </button>
+            {% endfor %}
+            </div>
+            {% for category in categories %}
+                <div class="menu-bar">
+                    <div class="category-name">
+                        <img src="{% static 'images/right-vector.svg' %}" alt="right-vector">
+                        <h2>{{ category.name }}</h2>
+                        <img src="{% static 'images/left-vector.svg' %}" alt="left-vector">
+                    </div>
+                    <div class="items-container">
+                        {% for product in category.products.all %}
+                        <div class="item-box">
+                            <div class="item-photo">
+                                <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'images/cup.jpg' %}{% endif %}" alt="تصویر محصول">
+                            </div>
+                            <div class="item-details">
+                                <div class="item-name-box">
+                                    <h4 class="item-name">{{ product.name }}</h4>
+                                    <p class="item-subname">{{ product.description|default:'' }}</p>
+                                </div>
+                                <div class="price-box">
+                                    {% for type in product.types.all %}
+                                    <div class="item-type">
+                                        <h5 class="item-type-title">{{ type.name }}</h5>
+                                        <p class="price">
+                                            <span>{{ type.price }}</span>
+                                            تومان
+                                        </p>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+</body>
+</html>
