@@ -1,10 +1,17 @@
+from django.core.validators import FileExtensionValidator
 from django.db import models
 
 
 class Category(models.Model):
     name = models.CharField(max_length=100, verbose_name='نام')
     description = models.CharField(max_length=255, null=True, blank=True, verbose_name='توضیحات')
-    icon = models.ImageField(upload_to='category_icons/', null=True, blank=True, verbose_name='آیکن')
+    icon = models.FileField(
+        upload_to='category_icons',
+        null=True,
+        blank=True,
+        verbose_name='آیکن',
+        validators=[FileExtensionValidator(allowed_extensions=['svg', 'png', 'jpg', 'jpeg'])]
+    )
 
     def __str__(self):
         return f'{self.name}: {self.description}'
