@@ -225,14 +225,14 @@ main{
 .item-name{
     font-family: "Vazir Regular";
     font-weight: 500;
-    font-size: 12px;
+    font-size: 13px;
     color: #FFD0A1;
 }
 
 .item-subname{
     font-family: "Vazir Regular";
     color: #F9F6E6;
-    font-size: 7px;
+    font-size: 9px;
     font-weight: 500;
 }
 
@@ -251,7 +251,7 @@ main{
     font-family: "Vazir Regular";
     font-weight: 500;
     color: #FFD0A1;
-    font-size: 8px;
+    font-size: 9px;
 }
 
 .price{
