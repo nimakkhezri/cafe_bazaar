@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اطلاعات کافه | کافه بازار</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <main>
+        <div class="menu-bg"></div>
+        <div class="menu-container">
+            <h1>درباره کافه بازار</h1>
+            <p>اینجا می‌تونید اطلاعات کافه رو اضافه کنید، مثل آدرس، شماره تماس، ساعات کاری، یا هر چیز دیگه‌ای.</p>
+            <a href="{% url 'menu_app:index' %}" class="main-btn">
+                <img src="{% static 'images/arrow-left.svg' %}" alt="back">
+                <h3 class="main-btn-text">بازگشت به صفحه اصلی</h3>
+            </a>
+        </div>
+    </main>
+</body>
+</html>
