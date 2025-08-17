@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خانه | کافه بازار</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <main>
+        <div class="image-container">
+            <img src="{% static 'images/main_vid_bg.gif' %}" alt="صفحه اصلی">
+        </div>
+        <div class="info-box">
+            <h1 class="title">کافه بازار</h1>
+            <div class="main-btn-container">
+                <a href="{% url 'menu_app:menu' %}" class="main-btn">
+                    <img src="{% static 'images/book.svg' %}" alt="menu">
+                    <h3 class="main-btn-text">مشاهده منوی کافه</h3>
+                </a>
+                <img src="{% static 'images/arrow-left.svg' %}" alt="arrow left">
+            </div>
+            <div class="main-btn-container">
+                <a href="{% url 'menu_app:about' %}" class="main-btn">
+                    <img src="{% static 'images/info-circle.svg' %}" alt="info">
+                    <h3 class="main-btn-text">مشاهده اطلاعات کافه</h3>
+                </a>
+                <img src="{% static 'images/arrow-left.svg' %}" alt="arrow left">
+            </div>
+        </div>
+    </main>
+</body>
+</html>
