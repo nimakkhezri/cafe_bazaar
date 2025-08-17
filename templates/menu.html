@@ -43,7 +43,7 @@
                                 <div class="price-box">
                                     {% for type in product.types.all %}
                                     <div class="item-type">
-                                        <h5 class="item-type-title">{{ type.name }}</h5>
+                                        <h5 class="item-type-title">{{ type.name|default:'' }}</h5>
                                         <p class="price">
                                             <span>{{ type.price }}</span>
                                             تومان
