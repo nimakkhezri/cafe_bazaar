@@ -275,3 +275,27 @@ main{
     gap: 20px;
 }
 
+/*Scroll button*/
+.back-to-top {
+    position: fixed; /* یا absolute اگر بخوای فقط داخل container باشه */
+    bottom: 20px;
+    right: 20px;
+    background-color: #FFD0A1;
+    color: #011d18;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+    cursor: pointer;
+    display: none; /* اول مخفی */
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+
+.back-to-top.show {
+    display: flex;
+}
