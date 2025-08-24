@@ -1,32 +1,32 @@
 @font-face {
     font-family: "Vazir Regular";
     src: local("Vazir Regular"),
-    url(../fonts/ttf/Vazirmatn-Regular.ttf) format("truetype"),
     url(../fonts/woff2/Vazirmatn-Regular.woff2) format("woff2");
+    url(../fonts/ttf/Vazirmatn-Regular.ttf) format("truetype"),
     font-weight: 500;
 }
 
 @font-face {
     font-family: "Vazir Medium";
     src: local("Vazir Medium"),
-    url(../fonts/ttf/Vazirmatn-Medium.ttf) format("truetype"),
     url(../fonts/woff2/Vazirmatn-Medium.woff2) format("woff2");
+    url(../fonts/ttf/Vazirmatn-Medium.ttf) format("truetype"),
     font-weight: 500;
 }
 
 @font-face {
     font-family: "Vazir Bold";
     src: local("Vazir Bold"),
-    url(../fonts/ttf/Vazirmatn-Bold.ttf) format("truetype"),
     url(../fonts/woff2/Vazirmatn-Bold.woff2) format("woff2");
+    url(../fonts/ttf/Vazirmatn-Bold.ttf) format("truetype"),
     font-weight: 700;
 }
 
 @font-face {
     font-family: "Vazir Light";
     src: local("Vazir Light"),
-    url(../fonts/ttf/Vazirmatn-Light.ttf) format("truetype"),
     url(../fonts/woff2/Vazirmatn-Light.woff2) format("woff2");
+    url(../fonts/ttf/Vazirmatn-Light.ttf) format("truetype"),
     font-weight: 300;
 }
 
@@ -40,6 +40,10 @@ a {
     text-decoration: none;
 }
 
+:root {
+    color-scheme: light;
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -49,7 +53,7 @@ body{
 }
 
 main{
-    max-width: 400px;
+    max-width: 460px;
     height: 100vh;
     position: relative;
     display: flex;

@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
+    <script src="{% static 'js/script.js' %}"></script>
     <main>
         <div class="menu-bg"></div>
         <div class="menu-container">
             <h1>به کافه بازار خوش آمدید</h1>
             <div class="menu-btn-bar">
                 {% for category in categories %}
-                <button class="category-btn">
+                <button class="category-btn" data-category="cat-{{ category.id }}">
                     <img src="{% if category.icon %}{{ category.icon.url }}{% else %}{% static 'images/coffee-maker.svg' %}{% endif %}" alt="{{ category.name }}">
                     <h3 class="category-btn-title">
                         {{ category.name }}
@@ -23,7 +24,7 @@
             {% endfor %}
             </div>
             {% for category in categories %}
-                <div class="menu-bar">
+                <div class="menu-bar" id="cat-{{ category.id }}">
                     <div class="category-name">
                         <img src="{% static 'images/right-vector.svg' %}" alt="right-vector">
                         <h2>{{ category.name }}</h2>
